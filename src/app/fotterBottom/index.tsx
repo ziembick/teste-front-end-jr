@@ -16,7 +16,12 @@ const imagesBottom = [
 export default function FooterBottom() {
   return (
     <div className={styles.footerBottom}>
-      <p>COPYRIGHT © 2019, TODOS OS DIREITOS RESERVADOS.</p>
+      <p>
+        Copyright © 2019. Todos os direitos reservados. Todas as marcas e suas
+        imagens são de propriedade de seus respectivos donos. É vedada a
+        reprodução, total ou parcial, de qualquer conteúdo sem expressa
+        autorização.
+      </p>
       <div className={styles.partnerLogos}>
         {imagesBottom.map((i, index) => (
           <Image key={index} src={i.src} alt={i.alt} width={80} height={30} />

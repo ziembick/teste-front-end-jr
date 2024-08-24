@@ -9,6 +9,7 @@ import Parceiros from "./components/parceiros";
 import ProductBanner from "./components/productBanner";
 import Brands from "./components/brands";
 import Footer from "./components/footer";
+import FooterBottom from "./fotterBottom";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
       <Brands />
       <Footer />
+      <FooterBottom />
     </div>
   );
 }
