@@ -3,7 +3,7 @@
   color: #fff
   padding: 40px 0
   max-width: 1442px
-  margin: 0 auto 0 auto // Centraliza o footer horizontalmente
+  margin: 0 auto
 
 .container
   max-width: 1266px
@@ -11,58 +11,73 @@
   display: flex
   justify-content: space-between
   align-items: flex-start
+  gap: 40px // Adiciona espaçamento entre as seções
 
 .section
   flex: 1
   padding: 0 20px
+  font-family: var(--font-poppins)
 
   h4
-    font-size: 16px
-    font-weight: bold
-    margin-bottom: 15px
+    font-size: 13px
+    font-weight: 700
+    margin-bottom: 20px
+    color: #fff
 
   ul
     list-style: none
     padding: 0
     margin: 0
+    margin-bottom: 40px 
 
     li
-      margin-bottom: 10px
-      font-size: 14px
-      color: #e1e1e1
+      font-size: 12px
+      font-weight: 300
+      color: #fff
+      line-height: 32px
 
   .socialMedia
+    position: absolute
+    bottom: 0 
+    left: 0
+    right: 0
     display: flex
-    gap: 10px
-    margin-top: 20px
+    justify-content: space-between 
+    
 
 .paymentMethods
   display: flex
   flex-wrap: wrap
-  gap: 10px
+  gap: 15px
   margin-top: 10px
 
 .newsletter
-  flex: 1.5
-  padding: 0 20px
-  background-color: #333
-  border-radius: 10px
+  width: 380px
+  height: 260px
   padding: 20px
+  background-color: #fff
+  border-radius: 10px
   text-align: left
+  font-family: var(--font-poppins)
+  color: #3F3F40
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+  display: flex
+  flex-direction: column
+  justify-content: center
 
   h4
-    font-size: 18px
-    font-weight: bold
+    font-size: 16px
+    font-weight: 300
     margin-bottom: 10px
-
     strong
-      font-weight: bold
-      color: #fff
+      font-weight: 700
+      font-size: 21px
 
   p
-    font-size: 14px
+    font-size: 12px
+    font-weight: 300
     margin-bottom: 20px
-    color: #b3b3b3
+    color: #3F3F40
 
   .subscribe
     display: flex
@@ -71,7 +86,7 @@
     input
       flex: 1
       padding: 10px
-      border: none
+      border: 1px solid #ccc
       border-radius: 5px 0 0 5px
       font-size: 14px
       background-color: #fff
@@ -87,18 +102,8 @@
       text-transform: uppercase
       font-size: 14px
 
-.footerBottom
-  background-color: #1a1a1a
-  padding: 10px 0
-  margin-top: 40px
-  display: flex
-  justify-content: space-between
-  align-items: center
-
-  p
-    font-size: 12px
-    margin: 0
-
-  .partnerLogos
-    display: flex
-    gap: 20px
+.about
+  max-width: 149px
+  max-height: 224px
+  position: relative // Permite posicionar a socialMedia corretamente dentro do about
+  padding-bottom: 40px // Adiciona espaço suficiente para as redes sociais

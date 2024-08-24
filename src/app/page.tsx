@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <Categories />
       <SectionTitle>Produtos relacionados</SectionTitle>
       <ProductSlider />
