@@ -9,13 +9,13 @@ import Parceiros from "./components/parceiros";
 import ProductBanner from "./components/productBanner";
 import Brands from "./components/brands";
 import Footer from "./components/footer";
-import FooterBottom from "./fotterBottom";
+import FooterBottom from "./components/fotterBottom";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       <Categories />
       <SectionTitle>Produtos relacionados</SectionTitle>
       <ProductSlider />

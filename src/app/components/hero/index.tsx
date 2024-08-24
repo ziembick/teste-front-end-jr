@@ -6,12 +6,19 @@ export default function Hero() {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.bannerWrapper}>
-        <Image src="/images/banner.svg" width={1443} height={395} alt="Banner" />
+        <Image 
+          src="/images/banner.svg" 
+          alt="Banner" 
+          layout="responsive" 
+          width={1443} 
+          height={395} 
+        />
         <Image
           src="/images/bannerShadow.svg"
+          alt="Banner Shadow"
+          layout="responsive"
           width={1443}
           height={395}
-          alt="Banner Shadow"
           className={styles.bannerShadow}
         />
         <div className={styles.textOverlay}>
