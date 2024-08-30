@@ -6,6 +6,7 @@ import Categories from "./components/categories";
 import SectionTitle from "./components/title";
 import ProductSlider from "./components/produtos";
 import Parceiros from "./components/parceiros";
+import ProductBanner from "./components/productBanner";
 
 export default function Home() {
   return (
@@ -20,6 +21,10 @@ export default function Home() {
         <SectionTitle viewAllText="Ver todos">
           Produtos relacionados
         </SectionTitle>
+      </div>
+      <ProductBanner />
+      <div className={styles.products}>
+        <SectionTitle>Navegue por marcas</SectionTitle>
       </div>
     </div>
   );
