@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import './swiper.sass'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './produtos.module.sass';
@@ -32,46 +32,56 @@ export default function Products() {
   }, []);
 
   return (
-    <div className={styles.sliderContainer}>
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={30} // Ajuste o espaçamento entre os slides
-        slidesPerView={4} // Ajuste o número de slides visíveis
-        navigation // Ativa as setas de navegação
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-        }}
-      >
-        {products.map((product, index) => (
-          <SwiperSlide key={index}>
-            <div className={styles.productCard}>
-              <Image 
-                src={product.photo} 
-                alt={product.productName} 
-                width={247} 
-                height={228} 
-                className={styles.productImage} 
-              />
-              <p className={styles.productName}>{product.productName}</p>
-              <p className={styles.oldPrice}>R$ {product.price.toFixed(2)}</p>
-              <p className={styles.newPrice}>R$ {product.price.toFixed(2)}</p>
-              <p className={styles.installments}>ou 2x de R$ {(product.price / 2).toFixed(2)} sem juros</p>
-              <button className={styles.buyButton}>Comprar</button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className={styles.sliderWrapper}>
+      <div className={styles.sliderContainer}>
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={30}
+          slidesPerView={4}
+          navigation={{
+            nextEl: `.${styles.swiperButtonNext}`,
+            prevEl: `.${styles.swiperButtonPrev}`,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            600: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          }}
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <div className={styles.productCard}>
+                <Image
+                  src={product.photo}
+                  alt={product.productName}
+                  width={270}
+                  height={200}
+                  className={styles.productImage}
+                />
+                <p className={styles.productName}>{product.productName}</p>
+                <p className={styles.oldPrice}>R$ {(product.price * 1.2).toFixed(2)}</p>
+                <p className={styles.newPrice}>R$ {product.price.toFixed(2)}</p>
+                <p className={styles.installments}>ou 2x de R$ {(product.price / 2).toFixed(2)} sem juros</p>
+                <p className={styles.freeShipping}>Frete grátis</p>
+                <button className={styles.buyButton}>Comprar</button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className={styles.swiperButtonPrev}><Image src="/images/arrow-left.svg" width={40} height={40} alt='Arrow Left'/></div>
+      <div className={styles.swiperButtonNext}><Image src="/images/arrow-right.svg" width={40} height={40} alt='Arrow Right'/></div>
     </div>
   );
+  
+  
 }

@@ -1,7 +1,12 @@
-.sliderContainer
+.sliderWrapper
+  position: relative
   max-width: 1200px
   margin: 0 auto
   padding: 20px 0
+
+.sliderContainer
+  position: relative
+  overflow: hidden // Garante que os elementos internos não saiam do contêiner
 
 .productCard
   background-color: #fff
@@ -13,7 +18,9 @@
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin: 0 10px // Espaçamento entre os itens
+  width: 270px
+  height: 500px
+  margin: 0 10px
 
   &:hover
     transform: translateY(-5px)
@@ -29,23 +36,33 @@
   color: #333
   font-weight: bold
   margin-bottom: 10px
+  text-align: left
 
 .oldPrice
   font-size: 14px
   color: #999
   text-decoration: line-through
   margin-bottom: 5px
+  text-align: left
 
 .newPrice
   font-size: 20px
   color: #F71963
   font-weight: bold
   margin-bottom: 10px
+  text-align: left
 
 .installments
   font-size: 14px
   color: #333
   margin-bottom: 15px
+  text-align: left
+
+.freeShipping
+  font-size: 14px
+  color: #F71963
+  margin-bottom: 15px
+  text-align: left
 
 .buyButton
   background-color: #F71963
@@ -58,3 +75,23 @@
 
   &:hover
     background-color: #d61e54
+
+.swiperButtonPrev, .swiperButtonNext
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  width: 40px
+  height: 40px
+  color: #fff
+  border-radius: 50%
+  z-index: 1000
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+
+.swiperButtonPrev
+  left: -50px 
+
+.swiperButtonNext
+  right: -50px 
