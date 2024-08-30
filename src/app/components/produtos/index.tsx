@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import './swiper.sass'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './produtos.module.sass';
@@ -18,6 +17,7 @@ interface Product {
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
+  const [activeCategory, setActiveCategory] = useState('CELULAR');
 
   useEffect(() => {
     fetch('/api/produtos')
@@ -31,8 +31,21 @@ export default function Products() {
       .catch(error => console.error("Erro ao buscar dados:", error));
   }, []);
 
+  const categories = ['CELULAR', 'ACESSÓRIOS', 'TABLETS', 'NOTEBOOKS', 'TVS', 'VER TODOS'];
+
   return (
     <div className={styles.sliderWrapper}>
+      <div className={styles.menu}>
+        {categories.map((category) => (
+          <div
+            key={category}
+            className={`${styles.menuItem} ${activeCategory === category ? styles.active : ''}`}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </div>
+        ))}
+      </div>
       <div className={styles.sliderContainer}>
         <Swiper
           modules={[Navigation]}
@@ -82,6 +95,4 @@ export default function Products() {
       <div className={styles.swiperButtonNext}><Image src="/images/arrow-right.svg" width={40} height={40} alt='Arrow Right'/></div>
     </div>
   );
-  
-  
 }
