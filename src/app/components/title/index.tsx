@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styles from './title.module.sass';
 
-export default function SectionTitle({ children, viewAllText }:any) {
+interface SectionTitleProps {
+  children: ReactNode;
+  viewAllText?: string;
+}
+
+export default function SectionTitle({ children, viewAllText }: SectionTitleProps) {
   return (
     <div className={styles.sectionTitleWrapper}>
       <div className={styles.sectionTitle}>
