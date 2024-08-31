@@ -26,24 +26,43 @@ export default function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.topBar}>
         <div className={styles.topBarItem}>
-          <Image src="/images/header/ShieldCheck.svg" alt="ShieldCheck Verify" width={20} height={20} className={styles.imageTopBar}/>
+          <Image
+            src="/images/header/ShieldCheck.svg"
+            alt="ShieldCheck Verify"
+            width={20}
+            height={20}
+            className={styles.imageTopBar}
+          />
           <p>
             Compra <span>100% segura</span>
           </p>
         </div>
         <div className={styles.topBarItem}>
-        <Image src="/images/header/Truck.svg" alt="Frete grátis" width={20} height={20} className={styles.imageTopBar}/>
+          <Image
+            src="/images/header/Truck.svg"
+            alt="Frete grátis"
+            width={20}
+            height={20}
+            className={styles.imageTopBar}
+          />
           <p>
             Frete grátis <span>acima de R$ 200</span>
           </p>
         </div>
         <div className={styles.topBarItem}>
-        <Image src="/images/header/CreditCard.svg" alt="Parcele suas compras" width={20} height={20} className={styles.imageTopBar}/>
+          <Image
+            src="/images/header/CreditCard.svg"
+            alt="Parcele suas compras"
+            width={20}
+            height={20}
+            className={styles.imageTopBar}
+          />
           <p>
             Parcele <span>suas compras</span>
           </p>
         </div>
       </div>
+
       <div className={styles.mainBar}>
         <div className={styles.logoContainer}>
           <Image
@@ -60,7 +79,12 @@ export default function Header() {
             className={styles.searchInput}
           />
           <button className={styles.searchButton}>
-            <Image src="/images/header/lupa.svg" alt="Search Icon Lupa" height={28} width={28}/>
+            <Image
+              src="/images/header/lupa.svg"
+              alt="Search Icon Lupa"
+              height={28}
+              width={28}
+            />
           </button>
         </div>
         <div className={styles.iconSet}>
@@ -78,7 +102,12 @@ export default function Header() {
         <p className={styles.highlight}>OFERTAS DO DIA</p>
         <p>
           <span className={styles.crownText}>
-            <Image src="/images/header/CrownSimple.svg" alt="Simple Crow Assinatura" width={20} height={20}/>
+            <Image
+              src="/images/header/CrownSimple.svg"
+              alt="Simple Crow Assinatura"
+              width={20}
+              height={20}
+            />
             ASSINATURA
           </span>
         </p>
