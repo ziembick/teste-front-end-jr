@@ -7,14 +7,14 @@ export default function Hero() {
     <div className={styles.heroContainer}>
       <div className={styles.bannerWrapper}>
         <Image 
-          src="/images/banner.svg" 
+          src="/images/banner/banner.svg" 
           alt="Banner" 
           layout="responsive" 
           width={1443} 
           height={395} 
         />
         <Image
-          src="/images/bannerShadow.svg"
+          src="/images/banner/bannerShadow.svg"
           alt="Banner Shadow"
           layout="responsive"
           width={1443}
