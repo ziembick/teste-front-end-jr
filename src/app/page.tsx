@@ -7,6 +7,8 @@ import SectionTitle from "./components/title";
 import ProductSlider from "./components/produtos";
 import Parceiros from "./components/parceiros";
 import ProductBanner from "./components/productBanner";
+import Brands from "./components/brands";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
       <div className={styles.products}>
         <SectionTitle>Navegue por marcas</SectionTitle>
       </div>
+      <Brands />
+      <Footer />
     </div>
   );
 }

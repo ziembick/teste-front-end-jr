@@ -1,0 +1,55 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import styles from './brands.module.sass';
+import { Navigation } from 'swiper/modules';
+
+export default function Brands() {
+  const brandImages = Array(15).fill('/images/logoBrands.svg'); // Preenche o array com o caminho da imagem
+
+  return (
+    <div className={styles.sliderWrapper}>
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={30}
+        slidesPerView={5}
+        navigation={{
+          nextEl: `.${styles.swiperButtonNext}`,
+          prevEl: `.${styles.swiperButtonPrev}`,
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+        }}
+      >
+        {brandImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className={styles.brandItem}>
+              <Image src={image} alt={`Brand Logo ${index + 1}`} width={172} height={172} />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className={styles.swiperButtonPrev}>
+        <Image src="/images/arrow-brands.svg" width={40} height={40} alt='Arrow Left' style={{ transform: 'rotate(180deg)' }}/>
+      </div>
+      <div className={styles.swiperButtonNext}>
+        <Image src="/images/arrow-brands.svg" width={40} height={40} alt='Arrow Right'/>
+      </div>
+    </div>
+  );
+}
