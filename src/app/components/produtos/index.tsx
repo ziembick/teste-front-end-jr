@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './produtos.module.sass';
 import { Navigation } from 'swiper/modules';
+import ProductModal from './modal';
 
 interface Product {
   productName: string;
@@ -18,6 +19,8 @@ interface Product {
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
   const [activeCategory, setActiveCategory] = useState('CELULAR');
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Estado para o produto selecionado
+  const [isModalOpen, setIsModalOpen] = useState(false); // Estado para o modal
 
   useEffect(() => {
     fetch('/api/produtos')
@@ -32,6 +35,16 @@ export default function Products() {
   }, []);
 
   const categories = ['CELULAR', 'ACESSÓRIOS', 'TABLETS', 'NOTEBOOKS', 'TVS', 'VER TODOS'];
+
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   return (
     <div className={styles.sliderWrapper}>
@@ -72,7 +85,7 @@ export default function Products() {
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <div className={styles.productCard}>
+              <div className={styles.productCard} onClick={() => openModal(product)}>
                 <Image
                   src={product.photo}
                   alt={product.productName}
@@ -93,6 +106,9 @@ export default function Products() {
       </div>
       <div className={styles.swiperButtonPrev}><Image src="/images/arrow-left.svg" width={40} height={40} alt='Arrow Left'/></div>
       <div className={styles.swiperButtonNext}><Image src="/images/arrow-right.svg" width={40} height={40} alt='Arrow Right'/></div>
+      
+      {/* Usando o componente modal */}
+      <ProductModal product={selectedProduct} isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

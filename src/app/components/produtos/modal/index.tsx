@@ -1,0 +1,86 @@
+import React, { useState } from "react";
+import Image from "next/image";
+import styles from "./modal.module.sass";
+
+interface Product {
+  productName: string;
+  descriptionShort: string;
+  photo: string;
+  price: number;
+}
+
+interface ProductModalProps {
+  product: Product | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function ProductModal({
+  product,
+  isOpen,
+  onClose,
+}: ProductModalProps) {
+  const [quantity, setQuantity] = useState(1);
+
+  if (!isOpen || !product) return null;
+
+  const handleDecrease = () => {
+    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const handleIncrease = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
+  return (
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.modalClose} onClick={onClose}>
+          ×
+        </button>
+        <div className={styles.modalProductInfo}>
+          <Image
+            src={product.photo}
+            alt={product.productName}
+            width={200}
+            height={200}
+            className={styles.image}
+          />
+          <div className={styles.modalDetails}>
+            <h1>{product.productName}</h1>
+            <p className={styles.modalPrice}>R$ {product.price.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, '$1.')}</p>
+
+            <p className={styles.description}>
+              Many desktop publishing packages and web page editors now many
+              desktop publishing
+            </p>
+            <p className={styles.moreDetails}>Ver mais detalhes do produto &gt;</p>
+            <div className={styles.modalActions}>
+              <div className={styles.quantitySelector}>
+                <button
+                  onClick={handleDecrease}
+                  className={styles.quantityButton}
+                >
+                  <Image src="/images/modal/minus.svg" alt="Minus" width={20} height={20}/>
+                </button>
+                <input
+                  type="number"
+                  value={quantity}
+                  readOnly
+                  className={styles.quantityInput}
+                />
+                <button
+                  onClick={handleIncrease}
+                  className={styles.quantityButton}
+                >
+                  <Image src="/images/modal/plus.svg" alt="Plus" width={20} height={20}/>
+                </button>
+              </div>
+            </div>
+            <button className={styles.buyButton}>COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
