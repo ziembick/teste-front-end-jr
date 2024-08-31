@@ -1,34 +1,44 @@
 import Image from "next/image";
 import React from "react";
-import {
-  PiShieldCheck,
-  PiTruck,
-  PiCreditCard,
-  PiMagnifyingGlass,
-  PiCrownSimpleLight,
-} from "react-icons/pi";
-import { FaRegHeart, FaRegUserCircle } from "react-icons/fa";
-import { TbShoppingCart } from "react-icons/tb";
 import styles from "./header.module.sass";
+
+const icons = [
+  {
+    src: "/images/header/box.svg",
+    alt: "Box",
+  },
+  {
+    src: "/images/header/heart.svg",
+    alt: "Heart Icon",
+  },
+  {
+    src: "/images/header/UserCircle.svg",
+    alt: "User Circle",
+  },
+  {
+    src: "/images/header/ShoppingCart.svg",
+    alt: "Shopping Cart",
+  },
+];
 
 export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.topBar}>
         <div className={styles.topBarItem}>
-          <PiShieldCheck />
+          <Image src="/images/header/ShieldCheck.svg" alt="ShieldCheck Verify" width={20} height={20} className={styles.imageTopBar}/>
           <p>
             Compra <span>100% segura</span>
           </p>
         </div>
         <div className={styles.topBarItem}>
-          <PiTruck />
+        <Image src="/images/header/Truck.svg" alt="Frete grátis" width={20} height={20} className={styles.imageTopBar}/>
           <p>
             Frete grátis <span>acima de R$ 200</span>
           </p>
         </div>
         <div className={styles.topBarItem}>
-          <PiCreditCard />
+        <Image src="/images/header/CreditCard.svg" alt="Parcele suas compras" width={20} height={20} className={styles.imageTopBar}/>
           <p>
             Parcele <span>suas compras</span>
           </p>
@@ -50,14 +60,13 @@ export default function Header() {
             className={styles.searchInput}
           />
           <button className={styles.searchButton}>
-            <PiMagnifyingGlass />
+            <Image src="/images/header/lupa.svg" alt="Search Icon Lupa" height={28} width={28}/>
           </button>
         </div>
         <div className={styles.iconSet}>
-          <Image src="/images/vector.svg" width={24} height={24} alt="Vector" />
-          <FaRegHeart width={32} height={32} />
-          <FaRegUserCircle width={32} height={32} />
-          <TbShoppingCart width={32} height={32} />
+          {icons.map((i, index) => (
+            <Image key={index} src={i.src} alt={i.src} width={32} height={32} />
+          ))}
         </div>
       </div>
       <nav className={styles.navBar}>
@@ -69,7 +78,7 @@ export default function Header() {
         <p className={styles.highlight}>OFERTAS DO DIA</p>
         <p>
           <span className={styles.crownText}>
-            <PiCrownSimpleLight width={20} height={20} size={18}/>
+            <Image src="/images/header/CrownSimple.svg" alt="Simple Crow Assinatura" width={20} height={20}/>
             ASSINATURA
           </span>
         </p>
