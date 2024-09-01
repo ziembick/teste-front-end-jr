@@ -16,7 +16,7 @@ export default function Brands() {
     <div className={styles.sliderWrapper}>
       <Swiper
         modules={[Navigation]}
-        spaceBetween={30}
+        spaceBetween={40}
         slidesPerView={5}
         navigation={{
           nextEl: `.${styles.swiperButtonNext}`,
