@@ -36,8 +36,24 @@ export default function ProductModal({
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.modalClose} onClick={onClose}>
-          ×
+          <div className={styles.closeIcon}>
+            <Image
+              src="/images/products/line.svg"
+              alt="Line 1"
+              className={styles.line1}
+              width={24}
+              height={24}
+            />
+            <Image
+              src="/images/products/line.svg"
+              alt="Line 2"
+              className={styles.line2}
+              width={24}
+              height={24}
+            />
+          </div>
         </button>
+
         <div className={styles.modalProductInfo}>
           <Image
             src={product.photo}
@@ -48,20 +64,33 @@ export default function ProductModal({
           />
           <div className={styles.modalDetails}>
             <h1>{product.productName}</h1>
-            <p className={styles.modalPrice}>R$ {product.price.toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+\,)/g, '$1.')}</p>
+            <p className={styles.modalPrice}>
+              R${" "}
+              {product.price
+                .toFixed(2)
+                .replace(".", ",")
+                .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
+            </p>
 
             <p className={styles.description}>
               Many desktop publishing packages and web page editors now many
               desktop publishing
             </p>
-            <p className={styles.moreDetails}>Ver mais detalhes do produto &gt;</p>
+            <p className={styles.moreDetails}>
+              Ver mais detalhes do produto &gt;
+            </p>
             <div className={styles.modalActions}>
               <div className={styles.quantitySelector}>
                 <button
                   onClick={handleDecrease}
                   className={styles.quantityButton}
                 >
-                  <Image src="/images/modal/minus.svg" alt="Minus" width={20} height={20}/>
+                  <Image
+                    src="/images/modal/minus.svg"
+                    alt="Minus"
+                    width={20}
+                    height={20}
+                  />
                 </button>
                 <input
                   type="number"
@@ -73,7 +102,12 @@ export default function ProductModal({
                   onClick={handleIncrease}
                   className={styles.quantityButton}
                 >
-                  <Image src="/images/modal/plus.svg" alt="Plus" width={20} height={20}/>
+                  <Image
+                    src="/images/modal/plus.svg"
+                    alt="Plus"
+                    width={20}
+                    height={20}
+                  />
                 </button>
               </div>
             </div>
