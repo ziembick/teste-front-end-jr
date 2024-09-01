@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import styles from "./produtos.module.sass";
 import { Navigation } from "swiper/modules";
 import ProductModal from "./modal";
+import Link from "next/link";
 
 interface Product {
   productName: string;
@@ -71,7 +72,7 @@ export default function Products() {
       <div className={styles.sliderContainer}>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={45}
+          spaceBetween={62}
           slidesPerView={4}
           navigation={{
             nextEl: `.${styles.swiperButtonNext}`,
@@ -80,7 +81,7 @@ export default function Products() {
           breakpoints={{
             1024: {
               slidesPerView: 4,
-              spaceBetween: 62,
+              spaceBetween: 40,
             },
             600: {
               slidesPerView: 3,
@@ -92,47 +93,41 @@ export default function Products() {
             },
           }}
         >
-          {products.map((product, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className={styles.productCard}
-                onClick={() => openModal(product)}
-              >
-                <Image
-                  src={product.photo}
-                  alt={product.productName}
-                  width={270}
-                  height={200}
-                  className={styles.productImage}
-                />
-                <p className={styles.productName}>{product.productName}</p>
-                <p className={styles.oldPrice}>
-                  R$
-                  {product.price
-                    .toFixed(2)
-                    .replace(".", ",")
-                    .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
-                </p>
-                <p className={styles.newPrice}>
-                  R$
-                  {product.price
-                    .toFixed(2)
-                    .replace(".", ",")
-                    .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
-                </p>
-                <p className={styles.installments}>
-                  ou 2x de R$
-                  {product.price
-                    .toFixed(2)
-                    .replace(".", ",")
-                    .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
-                   {" "}sem juros
-                </p>
-                <p className={styles.freeShipping}>Frete grátis</p>
-                <button className={styles.buyButton}>Comprar</button>
-              </div>
-            </SwiperSlide>
-          ))}
+          {products.map((product, index) => {
+            const oldPrice = product.price * 1.3;
+            const jurosPrice = product.price / 2;
+
+            return (
+              <SwiperSlide key={index}>
+                <div
+                  className={styles.productCard}
+                  onClick={() => openModal(product)}
+                >
+                  <Image
+                    src={product.photo}
+                    alt={product.productName}
+                    width={270}
+                    height={200}
+                    className={styles.productImage}
+                  />
+                  <p className={styles.productName}>{product.productName}</p>
+                  <p className={styles.oldPrice}>
+                    {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(oldPrice)}
+                  </p>
+                  <p className={styles.newPrice}>
+                    {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price)}
+                  </p>
+                  <p className={styles.installments}>
+                    ou 2x de R$
+                    {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(jurosPrice)}
+                    {" "}sem juros
+                  </p>
+                  <p className={styles.freeShipping}>Frete grátis</p>
+                  <button className={styles.buyButton}><Link href="#" className={styles.buyLink}>Comprar</Link></button>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className={styles.swiperButtonPrev}>

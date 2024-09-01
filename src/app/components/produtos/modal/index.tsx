@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./modal.module.sass";
+import Link from "next/link";
 
 interface Product {
   productName: string;
@@ -65,11 +66,10 @@ export default function ProductModal({
           <div className={styles.modalDetails}>
             <h1>{product.productName}</h1>
             <p className={styles.modalPrice}>
-              R${" "}
-              {product.price
-                .toFixed(2)
-                .replace(".", ",")
-                .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
+              {new Intl.NumberFormat("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              }).format(product.price)}
             </p>
 
             <p className={styles.description}>
@@ -77,7 +77,7 @@ export default function ProductModal({
               desktop publishing
             </p>
             <p className={styles.moreDetails}>
-              Ver mais detalhes do produto &gt;
+              <Link href="#" className={styles.detailsLink}>Ver mais detalhes do produto &gt;</Link>
             </p>
             <div className={styles.modalActions}>
               <div className={styles.quantitySelector}>
@@ -111,7 +111,11 @@ export default function ProductModal({
                 </button>
               </div>
             </div>
-            <button className={styles.buyButton}>COMPRAR</button>
+            <button className={styles.buyButton}>
+              <Link href="#" className={styles.buyLink}>
+                COMPRAR
+              </Link>
+            </button>
           </div>
         </div>
       </div>
