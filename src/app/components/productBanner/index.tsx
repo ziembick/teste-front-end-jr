@@ -29,7 +29,6 @@ export default function ProductBanner() {
             Lorem ipsum dolor sit amet, consectetur.
           </p>
           <button className={styles.button}>
-            {" "}
             <Link href="#" className={styles.confira}>
               CONFIRA
             </Link>
@@ -59,7 +58,6 @@ export default function ProductBanner() {
             Lorem ipsum dolor sit amet, consectetur.
           </p>
           <button className={styles.button}>
-            {" "}
             <Link href="#" className={styles.confira}>
               CONFIRA
             </Link>

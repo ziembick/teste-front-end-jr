@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './brands.module.sass';
 import { Navigation } from 'swiper/modules';
+import Link from 'next/link';
 
 export default function Brands() {
   const brandImages = Array(15).fill('/images/brands/logoBrands.svg'); 
@@ -39,7 +40,9 @@ export default function Brands() {
         {brandImages.map((image, index) => (
           <SwiperSlide key={index}>
             <div className={styles.brandItem}>
+              <Link href="#">
               <Image src={image} alt={`Brand Logo ${index + 1}`} width={172} height={172} />
+              </Link>
             </div>
           </SwiperSlide>
         ))}
