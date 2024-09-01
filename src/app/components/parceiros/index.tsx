@@ -7,8 +7,8 @@ export default function Parceiros() {
     <div className={styles.parceirosContainer}>
       <div className={styles.parceiroItem}>
         <div className={styles.imageWrapper}>
-          <Image src="/images/parceiros.svg" alt='Parceiros' width={574} height={350} className={styles.image} />
-          <Image src="/images/produtosShadow.svg" alt='Produtos Shadow' width={574} height={350} className={styles.shadow} />
+          <Image src="/images/parceiros/parceiros.svg" alt='Parceiros' width={574} height={350} className={styles.image} />
+          <Image src="/images/produtosShadow.svg" alt='Parceiros Shadow' width={574} height={350} className={styles.shadow} />
         </div>
         <div className={styles.overlay}>
           <h2 className={styles.title}>Parceiros</h2>
@@ -18,8 +18,8 @@ export default function Parceiros() {
       </div>
       <div className={styles.parceiroItem}>
         <div className={styles.imageWrapper}>
-          <Image src="/images/parceiros.svg" alt='Parceiros' width={574} height={350} className={styles.image} />
-          <Image src="/images/produtosShadow.svg" alt='Produtos Shadow' width={574} height={350} className={styles.shadow} />
+          <Image src="/images/parceiros/parceiros.svg" alt='Parceiros' width={574} height={350} className={styles.image} />
+          <Image src="/images/produtosShadow.svg" alt='Parceiros Shadow' width={574} height={350} className={styles.shadow} />
         </div>
         <div className={styles.overlay}>
           <h2 className={styles.title}>Parceiros</h2>
