@@ -9,7 +9,7 @@ import styles from './brands.module.sass';
 import { Navigation } from 'swiper/modules';
 
 export default function Brands() {
-  const brandImages = Array(15).fill('/images/logoBrands.svg'); // Preenche o array com o caminho da imagem
+  const brandImages = Array(15).fill('/images/brands/logoBrands.svg'); 
 
   return (
     <div className={styles.sliderWrapper}>
@@ -45,10 +45,10 @@ export default function Brands() {
         ))}
       </Swiper>
       <div className={styles.swiperButtonPrev}>
-        <Image src="/images/arrow-brands.svg" width={40} height={40} alt='Arrow Left' style={{ transform: 'rotate(180deg)' }}/>
+        <Image src="/images/brands/arrow-brands.svg" width={40} height={40} alt='Arrow Left' style={{ transform: 'rotate(180deg)' }}/>
       </div>
       <div className={styles.swiperButtonNext}>
-        <Image src="/images/arrow-brands.svg" width={40} height={40} alt='Arrow Right'/>
+        <Image src="/images/brands/arrow-brands.svg" width={40} height={40} alt='Arrow Right'/>
       </div>
     </div>
   );
