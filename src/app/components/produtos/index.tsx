@@ -126,7 +126,7 @@ export default function Products() {
                     .toFixed(2)
                     .replace(".", ",")
                     .replace(/(\d)(?=(\d{3})+\,)/g, "$1.")}
-                   sem juros
+                   {" "}sem juros
                 </p>
                 <p className={styles.freeShipping}>Frete grátis</p>
                 <button className={styles.buyButton}>Comprar</button>
