@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./productBanner.module.sass";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductBanner() {
   return (
@@ -27,7 +28,12 @@ export default function ProductBanner() {
           <p className={styles.description}>
             Lorem ipsum dolor sit amet, consectetur.
           </p>
-          <button className={styles.button}>CONFIRA</button>
+          <button className={styles.button}>
+            {" "}
+            <Link href="#" className={styles.confira}>
+              CONFIRA
+            </Link>
+          </button>
         </div>
       </div>
       <div className={styles.parceiroItem}>
@@ -52,7 +58,12 @@ export default function ProductBanner() {
           <p className={styles.description}>
             Lorem ipsum dolor sit amet, consectetur.
           </p>
-          <button className={styles.button}>CONFIRA</button>
+          <button className={styles.button}>
+            {" "}
+            <Link href="#" className={styles.confira}>
+              CONFIRA
+            </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./header.module.sass";
+import Link from "next/link";
 
 const icons = [
   {
@@ -94,22 +95,37 @@ export default function Header() {
         </div>
       </div>
       <nav className={styles.navBar}>
-        <p>TODAS CATEGORIAS</p>
-        <p>SUPERMERCADO</p>
-        <p>LIVROS</p>
-        <p>MODA</p>
-        <p>LANÇAMENTOS</p>
-        <p className={styles.highlight}>OFERTAS DO DIA</p>
         <p>
+          <Link href="#" className={styles.categoriesNav}>TODAS CATEGORIAS</Link>
+        </p>
+        <p>
+          <Link href="#" className={styles.categoriesNav}>SUPERMERCADO</Link>
+        </p>
+        <p>
+          <Link href="#" className={styles.categoriesNav}>LIVROS</Link>
+        </p>
+        <p>
+          <Link href="#" className={styles.categoriesNav}>MODA</Link>
+        </p>
+        <p>
+          <Link href="#" className={styles.categoriesNav}>LANÇAMENTOS</Link>
+        </p>
+        <p className={styles.highlight}>
+          <Link href="#" className={styles.highlight}>OFERTAS DO DIA</Link>
+        </p>
+        <p>
+          <Link href="#" className={styles.categoriesNav}>
           <span className={styles.crownText}>
             <Image
               src="/images/header/CrownSimple.svg"
               alt="Simple Crow Assinatura"
               width={20}
               height={20}
+              className={styles.crownImage}
             />
             ASSINATURA
           </span>
+          </Link>
         </p>
       </nav>
     </header>
