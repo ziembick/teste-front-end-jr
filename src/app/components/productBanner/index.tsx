@@ -8,7 +8,7 @@ export default function ProductBanner() {
       <div className={styles.parceiroItem}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/images/produtosBanner.png"
+            src="/images/productBanner/produtosBanner.png"
             alt="Produtos"
             width={588}
             height={284}
