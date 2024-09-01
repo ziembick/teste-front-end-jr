@@ -5,10 +5,11 @@ import styles from "./footer.module.sass";
 const paymentMethods = [
   { src: "/images/footer/visa.svg", alt: "Visa" },
   { src: "/images/footer/elo.svg", alt: "Elo" },
+  { src: "/images/footer/alelo.svg", alt: "Alelo" },
   { src: "/images/footer/dinners.svg", alt: "Diners Club" },
+  { src: "/images/footer/ifood.svg", alt: "iFood" },
   { src: "/images/footer/mastercard.svg", alt: "Mastercard" },
   { src: "/images/footer/pix.svg", alt: "Pix" },
-  { src: "/images/footer/ifood.svg", alt: "iFood" },
   { src: "/images/footer/amex.svg", alt: "Amex" },
   { src: "/images/footer/ticket.svg", alt: "Ticket" },
   { src: "/images/footer/sodexo.svg", alt: "Sodexo" },

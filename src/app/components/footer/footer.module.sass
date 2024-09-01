@@ -11,7 +11,7 @@
   display: flex
   justify-content: space-between
   align-items: flex-start
-  gap: 40px // Adiciona espaçamento entre as seções
+  gap: 40px
 
 .section
   flex: 1
@@ -28,7 +28,7 @@
     list-style: none
     padding: 0
     margin: 0
-    margin-bottom: 40px 
+    margin-bottom: 40px
 
     li
       font-size: 12px
@@ -38,23 +38,24 @@
 
   .socialMedia
     position: absolute
-    bottom: 0 
+    bottom: 0
     left: 0
     right: 0
     display: flex
-    justify-content: space-between 
-    
+    justify-content: space-between
 
 .paymentMethods
-  display: flex
-  flex-wrap: wrap
-  gap: 15px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 10px
   margin-top: 10px
+
+  
 
 .newsletter
   width: 380px
   height: 260px
-  padding: 20px
+  padding: 30px
   background-color: #fff
   border-radius: 10px
   text-align: left
@@ -66,17 +67,20 @@
   justify-content: center
 
   h4
-    font-size: 16px
+    font-size: 18px
+    color: #3F3F40
+    font-family: var(--font-poppins)
     font-weight: 300
-    margin-bottom: 10px
+    margin-bottom: 15px
     strong
       font-weight: 700
       font-size: 21px
 
   p
     font-size: 12px
+    font-family: var(--font-poppins)
     font-weight: 300
-    margin-bottom: 20px
+    margin-bottom: 31px
     color: #3F3F40
 
   .subscribe
@@ -87,23 +91,33 @@
       flex: 1
       padding: 10px
       border: 1px solid #ccc
-      border-radius: 5px 0 0 5px
+      width: 230px
+      height: 45px
+      border-radius: 4px
       font-size: 14px
       background-color: #fff
+
+      &::placeholder
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: 400
+        margin-left: 25px
+        color: #C0C0C0
 
     button
       padding: 10px 20px
       border: none
       background-color: #F71963
       color: #fff
-      border-radius: 0 5px 5px 0
+      border-radius: 4px
       cursor: pointer
       font-weight: bold
       text-transform: uppercase
       font-size: 14px
+      margin-left: 9px
 
 .about
   max-width: 149px
   max-height: 224px
-  position: relative // Permite posicionar a socialMedia corretamente dentro do about
-  padding-bottom: 40px // Adiciona espaço suficiente para as redes sociais
+  position: relative
+  padding-bottom: 40px
