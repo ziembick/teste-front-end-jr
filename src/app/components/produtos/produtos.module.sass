@@ -1,11 +1,11 @@
 .sliderWrapper
   position: relative
-  max-width: 1200px
+  max-width: 1266px  
   margin: 0 auto
-  padding: 20px 0
+  padding: 20px 0 20px 20px 
 
 .menu
-  max-width: 1265px
+  max-width: 1264px  
   max-height: 40px
   display: flex
   justify-content: space-between
@@ -33,27 +33,32 @@
   color: #F71963
   font-weight: bold
 
+
 .sliderContainer
   position: relative
-  overflow: hidden 
+  overflow: visible 
 
 .productCard
   background-color: #fff
   border-radius: 10px
   padding: 15px
   text-align: center
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
   transition: transform 0.2s, box-shadow 0.2s
   display: flex
   flex-direction: column
   justify-content: space-between
   width: 270px
   height: 500px
-  margin: 0 10px
+  margin: 10px 
+  position: relative
+  right: 6px
+
+
 
   &:hover
     transform: translateY(-5px)
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2)
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5)
 
 .productImage
   width: 100%
@@ -65,32 +70,39 @@
   font-size: 15px
   color: #3F3F40
   font-weight: 300
-  margin-bottom: 10px
+  margin-bottom: 12px
   text-align: left
 
 .oldPrice
-  font-size: 14px
-  color: #999
+  font-size: 16px
+  font-family: var(--font-poppins)
+  font-weight: 400
+  color: #808080
   text-decoration: line-through
-  margin-bottom: 5px
+  margin-bottom: 2px
   text-align: left
 
 .newPrice
   font-size: 20px
-  color: #F71963
-  font-weight: bold
-  margin-bottom: 10px
+  color: #3F3F40
+  font-weight: 700
+  font-family: var(--font-poppins)
+  margin-bottom: 2px
   text-align: left
 
 .installments
-  font-size: 14px
-  color: #333
-  margin-bottom: 15px
+  font-size: 12px
+  font-family: var(--font-poppins)
+  color: #3F3F40
+  font-weight: 400
+  margin-bottom: 7px
   text-align: left
 
 .freeShipping
-  font-size: 14px
+  font-size: 12px
+  font-family: var(--font-poppins)
   color: #F71963
+  font-weight: 400
   margin-bottom: 15px
   text-align: left
 
@@ -121,8 +133,8 @@
   justify-content: center
 
 .swiperButtonPrev
-  left: -50px 
+  left: -30px 
 
 .swiperButtonNext
-  right: -50px 
+  right: -45px 
 
