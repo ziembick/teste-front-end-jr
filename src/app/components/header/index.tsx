@@ -67,7 +67,7 @@ export default function Header() {
       <div className={styles.mainBar}>
         <div className={styles.logoContainer}>
           <Image
-            src="/images/logo.svg"
+            src="/images/header/logo.svg"
             width={139}
             height={51}
             alt="Logo VTEX"

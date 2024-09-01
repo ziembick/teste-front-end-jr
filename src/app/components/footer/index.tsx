@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./footer.module.sass";
+import Link from "next/link";
 
 const paymentMethods = [
   { src: "/images/footer/visa.svg", alt: "Visa" },
@@ -16,9 +17,9 @@ const paymentMethods = [
 ];
 
 const socialMedia = [
-  { src: "/images/footer/facebook.svg", alt: "Facebook" },
-  { src: "/images/footer/instagram.svg", alt: "Instagram" },
-  { src: "/images/footer/youtube.svg", alt: "Youtube" },
+  { src: "/images/footer/facebook.svg", alt: "Facebook", href: "https://www.facebook.com" },
+  { src: "/images/footer/instagram.svg", alt: "Instagram", href: "https://www.instagram.com" },
+  { src: "/images/footer/youtube.svg", alt: "Youtube", href: "https://www.youtube.com" },
 ];
 
 export default function Footer() {
@@ -27,35 +28,74 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.section}>
           <div className={styles.about}>
-          <h4>Sobre nós</h4>
-          <ul>
-            <li>CONHEÇA</li>
-            <li>COMO COMPRAR</li>
-            <li>INDICAÇÃO E DESCONTO</li>
-          </ul>
-          <div className={styles.socialMedia}>
-            {socialMedia.map((image, index) => (
-              <Image
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                width={22}
-                height={22}
-              />
-            ))}
-          </div>
+            <h4>Sobre nós</h4>
+            <ul>
+              <li>
+                <Link href="#" className={styles.links}>
+                  CONHEÇA
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  COMO COMPRAR
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  INDICAÇÃO E DESCONTO
+                </Link>
+              </li>
+            </ul>
+            <div className={styles.socialMedia}>
+              {socialMedia.map((image, index) => (
+                <Link href={image.href} key={index}>
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={22}
+                    height={22}
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.section}>
-          <h4>INFORMAÇÕES ÚTEIS</h4>
-          <ul>
-            <li>FALE CONOSCO</li>
-            <li>DÚVIDAS</li>
-            <li>PRAZOS DE ENTREGA</li>
-            <li>FORMAS DE PAGAMENTO</li>
-            <li>POLÍTICA DE PRIVACIDADE</li>
-            <li>TROCAS E DEVOLUÇÕES</li>
-          </ul>
+          <div className={styles.informations}>
+            <h4>INFORMAÇÕES ÚTEIS</h4>
+            <ul>
+              <li>
+                <Link href="#" className={styles.links}>
+                  FALE CONOSCO
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  DÚVIDAS
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  PRAZOS DE ENTREGA
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  FORMAS DE PAGAMENTO
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  POLÍTICA DE PRIVACIDADE
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className={styles.links}>
+                  TROCAS E DEVOLUÇÕES
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className={styles.section}>
           <h4>FORMAS DE PAGAMENTO</h4>

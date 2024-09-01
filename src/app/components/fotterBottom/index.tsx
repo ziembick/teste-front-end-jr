@@ -18,8 +18,9 @@ export default function FooterBottom() {
     <div className={styles.footerBottom}>
       <p>
         Copyright © 2019. Todos os direitos reservados. Todas as marcas e suas
-        imagens são de propriedade de seus respectivos donos. É vedada a
-        reprodução, total ou parcial, de qualquer conteúdo sem expressa
+        imagens são de propriedade de seus respectivos donos.
+        <br />
+        É vedada a reprodução, total ou parcial, de qualquer conteúdo sem expressa
         autorização.
       </p>
       <div className={styles.partnerLogos}>
