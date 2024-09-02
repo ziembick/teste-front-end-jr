@@ -8,11 +8,12 @@ Este projeto foi desenvolvido com Next.js, um framework poderoso que permite a c
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Next.js** - Framework React para renderização do lado do servidor e geração de sites dinâmicos ou estáticos.
-- **React** - Biblioteca JavaScript para construção de interfaces de usuário.
-- **Sass** - Pré-processador CSS para estilos aninhados e reutilizáveis.
-- **TypeScript** - Superconjunto de JavaScript que adiciona tipagem estática opcional à linguagem.
-- **Vercel** - Plataforma de hospedagem para aplicações modernas.
+- ![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js&logoColor=white)
+- ![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb)
+- ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+- ![Vercel](https://img.shields.io/badge/Vercel-000?style=for-the-badge&logo=vercel&logoColor=white)
+
 
 ## 📋 Pré-requisitos
 
