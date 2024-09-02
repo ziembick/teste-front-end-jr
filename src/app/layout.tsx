@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Lato, Montserrat, Poppins } from "next/font/google";
-// import "./globals.css";
 import "../styles/styles.sass";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,8 +23,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Vtex Ecommerce",
-  description: "Ecommerce iPhones Econvese & Paulo Ziembick",
+  title: "Econverse & VTEX Ecommerce",
+  description: "Ecommerce developed by Paulo Ziembick",
 };
 
 export default function RootLayout({

@@ -123,7 +123,7 @@ export default function Products() {
                     {" "}sem juros
                   </p>
                   <p className={styles.freeShipping}>Frete grátis</p>
-                  <button className={styles.buyButton}><Link href="#" className={styles.buyLink}>Comprar</Link></button>
+                  <button className={styles.buyButton}>Comprar</button>
                 </div>
               </SwiperSlide>
             );
