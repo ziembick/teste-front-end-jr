@@ -39,3 +39,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 4. **Rode o projeto localmente :**
    ```bash
    npm run dev
+
+4. **Para visualizar o site localmente, acesse a url:**
+   ```bash
+   http://localhost:3000/
