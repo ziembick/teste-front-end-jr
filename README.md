@@ -1,10 +1,10 @@
 # Teste Econverse: Vaga Estágio Desenvolvedor Front-End
 
-Este projeto é um teste para a vaga de Estágio Desenvolvedor Front-End na Econverse. Ele consiste em criar um Ecommerce utilizando Next.js e aplicando as melhores práticas de SEO. O projeto em produção pode ser visualizado através deste link: [Econverse VTEX Ecommerce](https://teste-front-end-jr-ten.vercel.app/)
+Este projeto é um teste para a vaga de Estágio Desenvolvedor Front-End na Econverse e o meu projeto em produção pode ser visualizado através deste link: [Econverse VTEX Ecommerce](https://teste-front-end-jr-ten.vercel.app/)
 
 # 🚀 Projeto Next.js
 
-Este é um projeto criado com Next.js, uma poderosa estrutura para desenvolvimento de aplicações React possível de aplicar as melhores práticas de SEO para Ecommerce.
+Este projeto foi desenvolvido com Next.js, um framework poderoso que permite a criação de aplicações React, proporcionando a aplicação das melhores práticas de SEO para e-commerce.
 
 ## 📋 Pré-requisitos
 
@@ -15,11 +15,11 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Next.js** - Framework React para renderização do lado do servidor e geração de sites dinâmicos.
+- **Next.js** - Framework React para renderização do lado do servidor e geração de sites dinâmicos ou estáticos.
 - **React** - Biblioteca JavaScript para construção de interfaces de usuário.
-- **Vercel** - Plataforma de hospedagem para aplicações modernas.
 - **Sass** - Pré-processador CSS para estilos aninhados e reutilizáveis.
 - **TypeScript** - Superconjunto de JavaScript que adiciona tipagem estática opcional à linguagem.
+- **Vercel** - Plataforma de hospedagem para aplicações modernas.
 
 ## ⚙️ Instalação
 
