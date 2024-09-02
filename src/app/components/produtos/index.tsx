@@ -85,7 +85,7 @@ export default function Products() {
             },
             1024: {
               slidesPerView: 4,
-              spaceBetween: 20,
+              spaceBetween: 30,
             },
             600: {
               slidesPerView: 3,
