@@ -72,7 +72,7 @@ export default function Products() {
       <div className={styles.sliderContainer}>
         <Swiper
           modules={[Navigation]}
-          spaceBetween={62}
+          spaceBetween={42}
           slidesPerView={4}
           navigation={{
             nextEl: `.${styles.swiperButtonNext}`,
@@ -80,7 +80,7 @@ export default function Products() {
           }}
           breakpoints={{
             1024: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 40,
             },
             600: {
