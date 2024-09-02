@@ -6,13 +6,6 @@ Este projeto é um teste para a vaga de Estágio Desenvolvedor Front-End na Econ
 
 Este projeto foi desenvolvido com Next.js, um framework poderoso que permite a criação de aplicações React, proporcionando a aplicação das melhores práticas de SEO para e-commerce.
 
-## 📋 Pré-requisitos
-
-Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
-
-- **Node.js** (versão 14.x ou superior)
-- **npm** (geralmente vem com o Node.js) ou **yarn**
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **Next.js** - Framework React para renderização do lado do servidor e geração de sites dinâmicos ou estáticos.
@@ -20,6 +13,13 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 - **Sass** - Pré-processador CSS para estilos aninhados e reutilizáveis.
 - **TypeScript** - Superconjunto de JavaScript que adiciona tipagem estática opcional à linguagem.
 - **Vercel** - Plataforma de hospedagem para aplicações modernas.
+
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
+
+- **Node.js** (versão 14.x ou superior)
+- **npm** (geralmente vem com o Node.js) ou **yarn**
 
 ## ⚙️ Instalação
 
