@@ -79,9 +79,13 @@ export default function Products() {
             prevEl: `.${styles.swiperButtonPrev}`,
           }}
           breakpoints={{
+            1443: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 40,
+              spaceBetween: 62,
             },
             600: {
               slidesPerView: 3,
