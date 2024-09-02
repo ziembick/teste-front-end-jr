@@ -84,8 +84,8 @@ export default function Products() {
               spaceBetween: 40,
             },
             1024: {
-              slidesPerView: 3,
-              spaceBetween: 62,
+              slidesPerView: 4,
+              spaceBetween: 20,
             },
             600: {
               slidesPerView: 3,
