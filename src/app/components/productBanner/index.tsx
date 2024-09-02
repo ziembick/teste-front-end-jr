@@ -40,14 +40,14 @@ export default function ProductBanner() {
           <Image
             src="/images/productBanner/produtosBanner.png"
             alt="Produtos"
-            width={588}
+            width={589}
             height={284}
             className={styles.image}
           />
           <Image
             src="/images/produtosShadow.svg"
             alt="Produtos"
-            width={588}
+            width={589}
             height={284}
             className={styles.shadow}
           />
